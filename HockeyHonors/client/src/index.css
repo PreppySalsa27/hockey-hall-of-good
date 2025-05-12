@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 0 0% 95.3%;
+  --foreground: 222 47.4% 11.2%;
+  --muted: 210 40% 96.1%;
+  --muted-foreground: 215.4 16.3% 46.9%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 222 47.4% 11.2%;
+  --card: 0 0% 100%;
+  --card-foreground: 222 47.4% 11.2%;
+  --border: 214.3 31.8% 91.4%;
+  --input: 214.3 31.8% 91.4%;
+  
+  /* Project-specific colors */
+  --primary: 221 69% 33%;
+  --primary-foreground: 210 40% 98%;
+  --secondary: 0 72% 51%;
+  --secondary-foreground: 210 40% 98%;
+  --accent: 48 93% 65%;
+  --accent-foreground: 222 47.4% 11.2%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 210 40% 98%;
+  --ring: 221 69% 33%;
+  --radius: 0.75rem;
+  
+  /* Chart colors */
+  --chart-1: 221 69% 33%;
+  --chart-2: 0 72% 51%;
+  --chart-3: 48 93% 65%;
+  --chart-4: 221 83% 53%;
+  --chart-5: 0 84% 60%;
+}
+
+.dark {
+  --background: 224 71% 4%;
+  --foreground: 213 31% 91%;
+  --muted: 223 47% 11%;
+  --muted-foreground: 215.4 16.3% 56.9%;
+  --popover: 224 71% 4%;
+  --popover-foreground: 215 20.2% 65.1%;
+  --card: 224 71% 4%;
+  --card-foreground: 213 31% 91%;
+  --border: 216 34% 17%;
+  --input: 216 34% 17%;
+  
+  /* Project-specific colors (dark mode) */
+  --primary: 221 69% 33%;
+  --primary-foreground: 210 40% 98%;
+  --secondary: 0 72% 51%;
+  --secondary-foreground: 210 40% 98%;
+  --accent: 48 93% 65%;
+  --accent-foreground: 222 47.4% 11.2%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 210 40% 98%;
+  --ring: 216 34% 17%;
+  
+  /* Chart colors (dark mode) */
+  --chart-1: 221 83% 53%;
+  --chart-2: 0 72% 51%;
+  --chart-3: 48 93% 65%;
+  --chart-4: 221 69% 33%;
+  --chart-5: 0 84% 60%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    font-family: 'Inter', sans-serif;
+    @apply bg-background text-foreground;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+  }
+}
+
+.timeline-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  @apply bg-primary;
+}
+
+.timeline-line {
+  width: 2px;
+  @apply bg-primary;
+}
+
+.sort-indicator {
+  transition: transform 0.2s ease;
+}
+
+.sorted-asc .sort-indicator {
+  transform: rotate(180deg);
+}
